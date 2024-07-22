@@ -24,3 +24,5 @@ The resulting file *"out/bios.bin"* contains the processed BIOS image.
 ## Troubleshooting
 ### scripts/xxx.sh: Permission denied
 `chmod +x scripts/xxx.sh`
+### python: not found
+Make sure that `python3` and `python-is-python3` are installed.
