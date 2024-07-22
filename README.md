@@ -22,5 +22,5 @@ make
 The resulting file *"out/bios.bin"* contains the processed BIOS image.
 
 ## Troubleshooting
-### /bin/sh: 1: scripts/test-build.sh: Permission denied
-`chmod +x scripts/test-build.sh`
+### scripts/xxx.sh: Permission denied
+`chmod +x scripts/xxx.sh`
