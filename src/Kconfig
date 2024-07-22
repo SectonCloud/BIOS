@@ -7,24 +7,25 @@ menu "General Features"
 choice
     prompt "Build Target"
     default QEMU
-    visible if n
 
     config COREBOOT
-        bool "Build for coreboot"
+        bool "coreboot"
         help
             Configure as a coreboot payload.
+        visible if 0
 
     config QEMU
-        bool "Build for QEMU/Xen/KVM/Bochs (CloudVM)"
+        bool "CloudVM"
         select QEMU_HARDWARE
         help
-            Configure for an emulated machine (QEMU, Xen, KVM, or Bochs).
+            Configure for an emulated CloudVM machine.
 
     config CSM
-       bool "Build as Compatibility Support Module for EFI BIOS"
-       help
-           Configure to be used by EFI firmware as Compatibility Support
-           module (CSM) to provide legacy BIOS services.
+        bool "CSM for EFI"
+        help
+            Configure to be used by EFI firmware as Compatibility Support
+            module (CSM) to provide legacy BIOS services.
+        visible if 0
 
 endchoice
 
@@ -111,6 +112,7 @@ endchoice
         help
             Add multiboot header in bios.bin.raw and accept files supplied
             as multiboot modules.
+
     config ENTRY_EXTRASTACK
         bool "Use internal stack for 16bit interrupt entry points"
         default y
