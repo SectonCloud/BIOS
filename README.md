@@ -9,7 +9,7 @@ To build for **QEMU** *(CloudVM uses QEMU by default)*, follow the steps below:
 git clone https://github.com/SectonCloud/BIOS
 ```
 
-2. Install **`build-essentials`** & **`git`**:
+2. Install **`build-essential`** & **`git`**:
 ```bash
 sudo apt-get install build-essential git -y
 ```
