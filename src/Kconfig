@@ -12,7 +12,6 @@ choice
         bool "coreboot"
         help
             Configure as a coreboot payload.
-        visible if 0
 
     config QEMU
         bool "CloudVM"
@@ -25,7 +24,6 @@ choice
         help
             Configure to be used by EFI firmware as Compatibility Support
             module (CSM) to provide legacy BIOS services.
-        visible if 0
 
 endchoice
 
