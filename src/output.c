@@ -31,8 +31,7 @@ struct putcinfo {
 void
 debug_banner(void)
 {
-    dprintf(1, "SeaBIOS (version %s)\n", VERSION);
-    dprintf(1, "BUILD: %s\n", BUILDINFO);
+    dprintf(1, "Build: %s\n", BUILDINFO);
 }
 
 // Write a character to debug port(s).
