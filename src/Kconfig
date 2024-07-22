@@ -536,6 +536,8 @@ endmenu
 source vgasrc/Kconfig
 
 menu "Debugging"
+    visible if n
+    
     config DEBUG_LEVEL
         int "Debug level"
         default 0
