@@ -96,7 +96,7 @@ enable_bootsplash(void)
 {
     if (!CONFIG_BOOTSPLASH)
         return;
-    u8 type = 0; /* 0 means jpg, 1 means bmp, default is 0=jpg */
+    u8 type = 1; /* 0 means jpg, 1 means bmp, default is 0=jpg */
     int filesize;
     u8 *filedata = romfile_loadfile("bootsplash.jpg", &filesize);
     if (!filedata) {
