@@ -703,7 +703,6 @@ interactive_bootmenu(void)
     // skip menu if only one boot device and no TPM
     if (show_boot_menu == 2 && !tpm_can_show_menu()
         && !hlist_empty(&BootList) && !BootList.first->next) {
-        printf("\n");
         return;
     }
 
@@ -780,7 +779,6 @@ interactive_bootmenu(void)
         if (boot)
             break;
     }
-    printf("\n");
 
     // Find entry and make top priority.
     hlist_del(&boot->node);
