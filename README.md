@@ -14,12 +14,22 @@ git clone https://github.com/SectonCloud/BIOS
 sudo apt-get install build-essential git -y
 ```
 
-3. Build firmware image:
+3. [Configure BIOS options](https://github.com/SectonCloud/BIOS#bios-configuration) *(optional)*
+
+4. Build firmware image:
 ```bash
 make
 ```
 
 The resulting file *"out/bios.bin"* contains the processed BIOS image.
+
+## BIOS configuration
+You can customize the processed BIOS image by running `make menuconfig`.
+
+*If you get "`Unable to find the ncurses libraries or the required header files.`", install **`libncurses5-dev`** & **`libncursesw5-dev`**:*
+```bash
+sudo apt-get install libncurses5-dev libncursesw5-dev
+```
 
 ## Troubleshooting
 ### scripts/xxx.sh: Permission denied
